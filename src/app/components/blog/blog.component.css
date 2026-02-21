@@ -1,0 +1,57 @@
+/* Actividad 5 - Inés Carazo Núñez */
+#formulario {
+    width: 350px;
+    display: flex;
+    margin-right: 5%;
+    flex-direction: column;
+    background-color: lightcyan;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+#btnEnviar {
+    width: 40%;
+    margin-top: 4%;
+}
+
+#blog {
+    display: flex;
+    margin: 1%;
+}
+
+#noticias {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.noticia {
+    width: 300px;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-wrap: initial;
+    overflow-wrap: anywhere;
+
+    img {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+.noticia_par {
+    background-color: rgb(247, 246, 246);
+    border: 1px solid cyan;
+}
+
+.noticia_impar {
+    background-color: lightcyan;
+    border: 1px solid cyan;
+}

@@ -1,0 +1,40 @@
+<!-- Actividad 5 - Inés Carazo Núñez -->
+<div id="blog">
+    <section id="formulario">
+        <!-- campos formulario y btn enviar -->
+        <h2>Añadir nueva noticia</h2>
+            <label>Título: </label>
+            <input type="text" placeholder="Introduce tu titulo" [(ngModel)]="noticia.titulo">
+
+            <label>Imagen noticia: </label>
+            <input type="text" placeholder="Introduce la imagen de la noticia" [(ngModel)]="noticia.imagen">
+
+            <label>Texto de la noticia: </label>
+            <input type="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="noticia.texto_noticia">
+
+            <label>Fecha publicación: </label>
+            <input type="date" data-date-format="dd/mm/aaaa" [value]="todayDate"
+                [(ngModel)]="noticia.fecha_publicacion">
+
+            <button id="btnEnviar" (click)="guardardata()">Enviar</button>
+
+    </section>
+    <section>
+        <h2>Noticias</h2>
+        <!-- noticias acumuladas (2 por defecto) -->
+        <div id="noticias">
+            @for (noticia of arrayNoticias; track noticia; let par = $even; let impar = $odd) {
+
+            <div class="noticia" [class.noticia_impar]="impar" [class.noticia_par]="par">
+                <img src="{{noticia.imagen}}">
+                <h2>{{noticia.titulo}} </h2>
+                <p>{{noticia.texto_noticia}} </p>
+                <p>{{noticia.fecha_publicacion}} </p>
+            </div>
+            }@empty {
+            <p>No hay noticias por el momento.</p>
+            }
+
+        </div>
+    </section>
+</div>
